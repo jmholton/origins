@@ -1,0 +1,42 @@
+# origins.com / CCP4 working files
+origins_temp*
+
+# Run logs
+*.log
+3poq_3pou.log
+
+# Maps and intermediate MTZs
+*.mtz
+*.map
+
+# Generated PDBs from origins.com runs
+neworigin.pdb
+newlabel_neworigin.pdb
+
+# Test bed and per-session derived PDBs (regeneratable from scripts)
+testbed_*.pdb
+porin_*.pdb
+*_after_top_altindex.pdb
+*_after_gemmiTopAltindex.pdb
+*_after_topAltindex.pdb
+*_lsqfit_to_*.pdb
+*_stretched_in_*.pdb
+
+# Origins.com backups / variants
+*.lkg
+*.bak
+origins.com.deconv_stretch
+origins.com.stretch_attempt
+
+# Editor / OS
+*~
+.DS_Store
+__pycache__/
+*.pyc
+
+# Claude Code session files
+.claude/
+
+# Local exploratory dirs / backup files
+pointless_test/
+orig_origins.com
