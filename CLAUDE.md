@@ -71,6 +71,8 @@ These standalone scripts complement the tcsh tool. All use the CCP4 Python (`ccp
 | `nearest_altindex.py` | Given two PDBs, LSQ-fit them and rank crystallographic `(altindex × symop)` combinations by rotational deviation from the LSQ rotation. Filters out non-metric-preserving combinations (alt-cell shears that aren't valid rotations in the original cell). Writes the top-ranked transformation as a PDB. |
 | `blur_sweep.py` | Sweep `test_altindex.py` across resolutions to study how map blur affects origins.com CC scores. |
 | `test_altindex.py`, `test_pointless_hypothesis.py` | Synthetic tests of alt-indexing recovery and pointless's HKL-relabel choices. |
+| `test_phase_transform.py` | In-memory verification of the phase transformation rule `F'(h) = F(R^T h) * exp(2 pi i h t)` for an alt-indexing op. Two presets: `P4` and `H32`, both symmorphic and non-symmorphic variants. |
+| `test_phase_all_sg.py` | Sweep the phase transformation test across every SG in gemmi's catalog (559 SGs). Auto-picks a representative cell per crystal system and a metric-preserving alt-index op (`R^T G R = G`) outside the SG. SGs whose holohedry equals their SG (P-1, 2/m, etc.) are SKIPPED. ~19 min, all pass at machine precision. |
 
 ### Usage
 

@@ -51,6 +51,8 @@ Output is a `neworigin.pdb` containing the moving structure transformed by the b
 | [`nearest_altindex.py`](nearest_altindex.py) | Given two PDBs, do an LSQ rigid-body fit and rank crystallographic `(altindex × symop)` combinations by how well they reproduce the LSQ rotation. Filters out non-metric-preserving combinations and writes the top-ranked transformation as a PDB. |
 | [`blur_sweep.py`](blur_sweep.py) | Run `test_altindex.py` at several resolutions to see how map blur affects origins.com's CC scores. |
 | [`test_altindex.py`](test_altindex.py), [`test_pointless_hypothesis.py`](test_pointless_hypothesis.py) | Synthetic tests for alt-indexing recovery and pointless's HKL-relabel correctness. |
+| [`test_phase_transform.py`](test_phase_transform.py) | Verify the phase-transformation rule `F'(h) = F(Rᵀ·h) · exp(2πi · h · t)` — what's needed to alt-index a refined MTZ alongside the PDB without redoing refinement. P4 and H32 presets. |
+| [`test_phase_all_sg.py`](test_phase_all_sg.py) | Sweep the phase-transformation test across all 559 SGs in gemmi's catalog. 329 PASS, 230 SKIP (centric SGs whose holohedry equals their own symmetry), 0 FAIL. |
 
 ### Quick examples
 
